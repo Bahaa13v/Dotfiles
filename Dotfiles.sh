@@ -1,8 +1,5 @@
 #!/bin/bash
 
-rm README.md
-mv packages.txt ~/
-mkdir ~/.config
-cp -r * ~/.config/
-rm ~/.config/Dotfiles.sh
-echo "Done... you may want to reboot"
+mv packages.txt /home/bahaa
+mkdir /home/bahaa/.config
+cp -r * /home/bahaa/.config/
