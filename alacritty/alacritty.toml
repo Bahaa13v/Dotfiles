@@ -89,7 +89,7 @@ key = "Return"
 mods = "Control|Shift"
 
 [shell]
-program = "/bin/zsh"
+program = "/bin/bash"
 
 [window.padding]
 x = 20
