@@ -7,3 +7,4 @@ cp -r sway /home/bahaa/.config/
 cp -r neofetch /home/bahaa/.config/
 cp -r waybar /home/bahaa/.config/
 cp -r wofi /home/bahaa/.config/
+cp -r walls /home/bahaa/
