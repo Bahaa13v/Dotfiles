@@ -16,6 +16,8 @@ cp -r wofi /home/bahaa/.config/
 
 cp -r walls /home/bahaa/
 
+sudo pacman -S --needed --noconfirm --disable-download-timeout bash-preexec grml-zsh-config powerline python-click-completion zsh zsh-autosuggestions zsh-completions zsh-doc zsh-history-substring-search zsh-lovers zsh-syntax-highlighting zshdb
+
 sudo pacman -S --needed --noconfirm --disable-download-timeout go base-devel
 
 
