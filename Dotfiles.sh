@@ -36,6 +36,13 @@ cd ../Dotfiles
 
 yay -S --noconfirm --disable-download-timeout ttf-geist ttf-geist-mono
 
+
+sudo pacman -S sddm qt5-graphicaleffects qt5-svg qt5-quickcontrols2
+yay -S sddm-theme-corners-git
+sudo sudo mkdir /etc/sddm.conf.d/
+sudo sed -i
+
+
 chmod +x Extra.sh
 echo "Runing Extra.... you can cancel"
 sleep 5
