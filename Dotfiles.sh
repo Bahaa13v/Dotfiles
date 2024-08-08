@@ -40,8 +40,8 @@ yay -S --noconfirm --disable-download-timeout ttf-geist ttf-geist-mono
 sudo pacman -S sddm qt5-graphicaleffects qt5-svg qt5-quickcontrols2
 yay -S sddm-theme-corners-git
 sudo sudo mkdir /etc/sddm.conf.d/
-sudo sed -i
-
+sudo sed -i '1i [Theme]' /etc/sddm.conf.d/th.conf
+sudo sed -i '2i Current=corners' /etc/sddm.conf.d/th.conf
 
 chmod +x Extra.sh
 echo "Runing Extra.... you can cancel"
