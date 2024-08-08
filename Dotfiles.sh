@@ -37,17 +37,15 @@ cd ../Dotfiles
 yay -S --noconfirm --disable-download-timeout ttf-geist ttf-geist-mono
 
 
-sudo pacman -S sddm qt5-graphicaleffects qt5-svg qt5-quickcontrols2
-yay -S sddm-theme-corners-git
-sudo sudo mkdir /etc/sddm.conf.d/
-sudo sed -i '1i [Theme]' /etc/sddm.conf.d/th.conf
-sudo sed -i '2i Current=corners' /etc/sddm.conf.d/th.conf
+sudo pacman -S --noconfirm --disable-download-timeout sddm qt5-graphicaleffects qt5-svg qt5-quickcontrols2
+yay -S --noconfirm --disable-download-timeout sddm-theme-corners-git
+sudo sed -i 's/^Current=.*/Current=corners/' /usr/lib/sddm/sddm.conf.d/default.conf
 sudo mv lock.jpg /usr/share/sddm/themes/corners/backgrounds/
 sudo sed -i '20i BgSource="backgrounds/lock.jpg"' /usr/share/sddm/themes/corners/theme.conf
 sudo sed -i '21d' /usr/share/sddm/themes/corners/theme.conf
 
 
-yay -S grub-theme-cyberre
+yay -S --noconfirm --disable-download-timeout grub-theme-cyberre
 sudo sed -i '48i GRUB_THEME="/usr/share/grub/themes/CyberRe/theme.txt"' /etc/default/grub
 
 chmod +x Extra.sh
