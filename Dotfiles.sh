@@ -47,7 +47,7 @@ sudo sed -i '21d' /usr/share/sddm/themes/corners/theme.conf
 
 yay -S --noconfirm --disable-download-timeout grub-theme-cyberre
 sudo sed -i '48i GRUB_THEME="/usr/share/grub/themes/CyberRe/theme.txt"' /etc/default/grub
-
+sudo grub-mkconfig -o /boot/grub/grub.cfg
 chmod +x Extra.sh
 echo "Runing Extra.... you can cancel"
 sleep 5
