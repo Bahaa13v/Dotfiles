@@ -18,7 +18,7 @@ set $menu wofi --show drun
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 
-#output * bg /home/bahaa/walls/lofi.jpg fill
+output * bg /home/bahaa/walls/lofi.jpg fill
 
 #
 # Example configuration:
