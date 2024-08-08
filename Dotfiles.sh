@@ -1,8 +1,8 @@
 #!/bin/bash
 
-sudo pacman -S --needed sddm sway swaybg waybar alacritty wofi neofetch awesome-terminal-fonts ttf-font-awesome ttf-hack-nerd
-
+sudo pacman -S --needed --noconfirm --disable-download-timeout sddm sway
 sudo systemctl enable sddm
+sudo pacman -S --needed --noconfirm --disable-download-timeout swaybg waybar alacritty wofi neofetch awesome-terminal-fonts ttf-font-awesome ttf-hack-nerd
 
 mv packages.txt /home/bahaa/
 
@@ -16,10 +16,24 @@ cp -r wofi /home/bahaa/.config/
 
 cp -r walls /home/bahaa/
 
-sudo pacman -S --needed go ttf-dejavu pulseaudio pavucontrol dolphin ttf-joypixels ttf-sazanami unzip wget zsh chromium fastfetch base-devel htop linux-headers linux-docs meson ninja
+sudo pacman -S --needed --noconfirm --disable-download-timeout go base-devel
+
 
 cd ..
 git clone https://aur.archlinux.org/yay
 cd yay
-makepkg -si
-yay -S ttf-geist ttf-geist-mono
+makepkg -si --noconfirm
+cd ../Dotfiles
+
+
+yay -S --noconfirm --disable-download-timeout ttf-geist ttf-geist-mono
+
+read -p "Do you want to get the extra stuff? (y/n): " answer
+
+if [[ "$answer" == "y" ]]; then
+
+    ./Extra.sh
+else
+    echo "look out for what you need"
+    cat Extra.sh
+fi
