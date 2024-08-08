@@ -46,6 +46,10 @@ sudo mv lock.jpg /usr/share/sddm/themes/corners/backgrounds/
 sudo sed -i '20i BgSource="backgrounds/lock.jpg"' /usr/share/sddm/themes/corners/theme.conf
 sudo sed -i '21d' /usr/share/sddm/themes/corners/theme.conf
 
+
+yay -S grub-theme-cyberre
+sudo sed -i '48i GRUB_THEME="/usr/share/grub/themes/CyberRe/theme.txt"' /etc/default/grub
+
 chmod +x Extra.sh
 echo "Runing Extra.... you can cancel"
 sleep 5
