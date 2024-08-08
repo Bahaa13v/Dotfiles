@@ -31,4 +31,6 @@ cd ../Dotfiles
 yay -S --noconfirm --disable-download-timeout ttf-geist ttf-geist-mono
 
 chmod +x Extra.sh
+echo "Runing Extra.... you can cancel"
+sleep 5
 ./Extra.sh
