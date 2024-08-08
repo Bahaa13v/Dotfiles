@@ -30,12 +30,5 @@ cd ../Dotfiles
 
 yay -S --noconfirm --disable-download-timeout ttf-geist ttf-geist-mono
 
-read -p "Do you want to get the extra stuff? (y/n): " answer
-
-if [[ "$answer" == "y" ]]; then
-    chmod +x Extra.sh
-    ./Extra.sh
-else
-    echo "look out for what you need"
-    cat Extra.sh
-fi
+chmod +x Extra.sh
+./Extra.sh
