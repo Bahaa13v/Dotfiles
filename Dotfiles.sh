@@ -4,8 +4,6 @@ sudo pacman -S --needed --noconfirm --disable-download-timeout sddm sway
 sudo systemctl enable sddm
 sudo pacman -S --needed --noconfirm --disable-download-timeout swaybg waybar alacritty wofi neofetch awesome-terminal-fonts ttf-font-awesome ttf-hack-nerd
 
-mv packages.txt /home/bahaa/
-
 mkdir /home/bahaa/.config
 
 cp -r alacritty /home/bahaa/.config/
