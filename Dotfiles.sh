@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo pacman -S --needed sddm sway swaybg waybar alacritty wofi neofetch awesome-terminal-font ttf-font-awesome ttf-hack-nerd
+sudo pacman -S --needed sddm sway swaybg waybar alacritty wofi neofetch awesome-terminal-fonts ttf-font-awesome ttf-hack-nerd
 
 sudo systemctl enable sddm
 
