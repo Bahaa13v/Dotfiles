@@ -13,3 +13,5 @@ sudo pacman -S --needed --noconfirm --disable-download-timeout chromium xorg xor
 echo "Other.."
 
 sudo pacman -S --needed --noconfirm --disable-download-timeout ttf-sazanami unzip wget fastfetch htop linux-headers linux-docs meson ninja
+
+echo "Done"
