@@ -42,6 +42,10 @@ yay -S sddm-theme-corners-git
 sudo sudo mkdir /etc/sddm.conf.d/
 sudo sed -i '1i [Theme]' /etc/sddm.conf.d/th.conf
 sudo sed -i '2i Current=corners' /etc/sddm.conf.d/th.conf
+sudo mv lock.jpg /usr/share/sddm/themes/corners/backgrounds/
+sudo sed -i 's/^BgSource="backgrounds/glacier.png"/BgSource="backgrounds/lock.jpg"' /usr/share/sddm/themes/corners/theme.conf
+
+
 
 chmod +x Extra.sh
 echo "Runing Extra.... you can cancel"
