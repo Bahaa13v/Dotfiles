@@ -1,2 +1,2 @@
 # dotfiles
-My customization for Arch Linux
+My customization for Sway, sddm and GRUB on Arch Linux
