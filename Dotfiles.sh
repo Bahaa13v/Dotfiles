@@ -1,12 +1,25 @@
 #!/bin/bash
-sudo pacman -S --needed --noconfirm --disable-download-timeout sway sddm swaybg waybar alacritty wofi neofetch awesome-terminal-fonts ttf-font-awesome ttf-hack-nerd
+
 mkdir -p /home/bahaa/.config
-cp -r alacritty /home/bahaa/.config/
+
+sudo pacman -S --needed --noconfirm --disable-download-timeout sway
 cp -r sway /home/bahaa/.config/
+
+
+sudo pacman -S --needed --noconfirm --disable-download-timeout alacritty wofi neofetch
+cp -r alacritty /home/bahaa/.config/
 cp -r neofetch /home/bahaa/.config/
-cp -r waybar /home/bahaa/.config/
 cp -r wofi /home/bahaa/.config/
+
+sudo pacman -S --needed --noconfirm --disable-download-timeout waybar awesome-terminal-fonts ttf-font-awesome ttf-hack-nerd
+cp -r waybar /home/bahaa/.config/
+
+
+sudo pacman -S --needed --noconfirm --disable-download-timeout swaybg
 cp -r walls /home/bahaa/
+
+sudo pacman -S --needed --noconfirm --disable-download-timeout sddm
+
 echo "Setting up Zsh..."
 sleep 3
 sudo pacman -S --needed --noconfirm --disable-download-timeout bash-preexec grml-zsh-config powerline python-click-completion zsh zsh-autosuggestions zsh-completions zsh-doc zsh-history-substring-search zsh-lovers zsh-syntax-highlighting zshdb
@@ -15,30 +28,16 @@ echo "source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlight
 echo "source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh" >> /home/bahaa/.zshrc
 echo "source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh" >> /home/bahaa/.zshrc
 
+echo "Setting up yay"
 sudo pacman -S --needed --noconfirm --disable-download-timeout go base-devel
-
-
 cd ..
 git clone https://aur.archlinux.org/yay
 cd yay
 makepkg -si --noconfirm
 cd ../Dotfiles
 
-
 yay -S --noconfirm --disable-download-timeout ttf-geist ttf-geist-mono
 
-
-sudo pacman -S --noconfirm --disable-download-timeout sddm qt5-graphicaleffects qt5-svg qt5-quickcontrols2
-yay -S --noconfirm --disable-download-timeout sddm-theme-corners-git
-sudo sed -i 's/^Current=.*/Current=corners/' /usr/lib/sddm/sddm.conf.d/default.conf
-sudo mv lock.jpg /usr/share/sddm/themes/corners/backgrounds/
-sudo sed -i '20i BgSource="backgrounds/lock.jpg"' /usr/share/sddm/themes/corners/theme.conf
-sudo sed -i '21d' /usr/share/sddm/themes/corners/theme.conf
-
-
-yay -S --noconfirm --disable-download-timeout grub-theme-cyberre
-sudo sed -i '48i GRUB_THEME="/usr/share/grub/themes/CyberRe/theme.txt"' /etc/default/grub
-sudo grub-mkconfig -o /boot/grub/grub.cfg
 chmod +x Extra.sh
 echo "Runing Extra.... you can cancel"
 sleep 5
