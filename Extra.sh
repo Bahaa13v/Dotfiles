@@ -4,7 +4,7 @@ sudo pacman -S --noconfirm --disable-download-timeout ttf-dejavu ttf-dejavu-nerd
 
 echo "Browser..."
 sleep 3
-yay -S --noconfirm --disable-download-timeout google-chrome
+yay -S --noconfirm --disable-download-timeout google-chrome-dev
 
 echo "Other..."
 sleep 3
