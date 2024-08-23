@@ -29,7 +29,9 @@ echo "source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
 echo "source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh" >> /home/bahaa/.zshrc
 
 echo "Setting up yay"
-sudo pacman -S --needed --noconfirm --disable-download-timeout go base-devel
+sleep 3
+sudo pacman -S --needed --noconfirm --disable-download-timeout base-devel
+sudo pacman -S --needed --noconfirm --disable-download-timeout go
 cd ..
 git clone https://aur.archlinux.org/yay
 cd yay
