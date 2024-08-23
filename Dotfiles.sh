@@ -38,6 +38,8 @@ cd ../Dotfiles
 
 yay -S --noconfirm --disable-download-timeout ttf-geist ttf-geist-mono
 
+sudo pacman -S --noconfirm --disable-download-timeout intel-ucode xorg xorg-drivers pulseaudio pavucontrol
+
 chmod +x Extra.sh
 echo "Runing Extra.... you can cancel"
 sleep 5
